@@ -79,12 +79,12 @@ namespace _247.Travels.Ng.Apis.Server
         /// <returns></returns>
         [AllowAnonymous]
         [HttpGet(EndpointRoutes.ProcessFlightOffers)]
-        public async Task<ActionResult> ProcessOffersAsync([FromQuery] string flightRequestId)
+        public async Task<ActionResult> ProcessOffersAsync([FromQuery] string flightRequestId, [FromQuery] string customerType)
         {
             try
             {
                 // Process flight offers
-                var operation = await distributionService.ProcessOffersAsync(flightRequestId);
+                var operation = await distributionService.ProcessOffersAsync(flightRequestId, customerType);
 
                 // If operation was un successful...
                 if (!operation.Successful)
