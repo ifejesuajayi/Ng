@@ -112,6 +112,46 @@ namespace _247.Travels.Ng.Apis.Server
         }
 
         /// <summary>
+        /// Initiates the operation that processes flight offers
+        /// </summary>
+        /// <param name="flightRequestId">The flight request id</param>
+        /// <param name="amaClientRef">The ama client ref</param>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpGet(EndpointRoutes.ProcessOptimizedFlightOffers)]
+        public async Task<ActionResult> ProcessOptimizedOffersAsync([FromQuery] string flightRequestId, [FromQuery] string customerType)
+        {
+            try
+            {
+                // Process flight offers
+                var operation = await distributionService.ProcessOffersAsync(flightRequestId, customerType, restrictAirlines: true);
+
+                // If operation was un successful...
+                if (!operation.Successful)
+                {
+                    // Log the error
+                    logger.LogError(operation.ErrorMessage);
+
+                    // Return error response
+                    return Problem(title: operation.ErrorTitle,
+                        statusCode: operation.StatusCode, detail: operation.ErrorMessage);
+                }
+
+                // Return result
+                return Ok(operation.Result);
+            }
+            catch (Exception ex)
+            {
+                // Log error response
+                logger.LogError(ex.Message);
+
+                // Return error response
+                return Problem(title: "SYSTEM ERROR",
+                    statusCode: StatusCodes.Status500InternalServerError, detail: ex.Message);
+            }
+        }
+
+        /// <summary>
         /// Verifies price of a flight result
         /// </summary>
         /// <param name="offerId">The flight offer id</param>
