@@ -124,7 +124,7 @@ namespace _247.Travels.Ng.Apis.Server
             try
             {
                 // Process flight offers
-                var operation = await distributionService.ProcessOffersAsync(flightRequestId, customerType, restrictAirlines: true);
+                var operation = await distributionService.ProcessOptimizedOffersAsync(flightRequestId, customerType, restrictAirlines: true);
 
                 // If operation was un successful...
                 if (!operation.Successful)
