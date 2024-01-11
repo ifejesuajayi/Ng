@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "247.Travels.Ng.Api.Server", "247.Travels.Ng.Api.Server.csproj", "{8578411C-54DD-46A7-BCD8-524633733AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xown.Travels.Core", "..\..\..\xown\xown-travels-core\xown.travels.core\Xown.Travels.Core.csproj", "{4EECD3DC-549A-4027-8151-E8B686816921}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8578411C-54DD-46A7-BCD8-524633733AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8578411C-54DD-46A7-BCD8-524633733AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8578411C-54DD-46A7-BCD8-524633733AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8578411C-54DD-46A7-BCD8-524633733AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EECD3DC-549A-4027-8151-E8B686816921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EECD3DC-549A-4027-8151-E8B686816921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EECD3DC-549A-4027-8151-E8B686816921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EECD3DC-549A-4027-8151-E8B686816921}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {754B7295-C58A-41F3-B662-DE3177B6A27A}
+	EndGlobalSection
+EndGlobal
