@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="Xown.Travels.Core" Version="2.0.8-alpha.1.5.3" />
+    <PackageReference Include="Xown.Travels.Core" Version="2.0.8-alpha.2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
