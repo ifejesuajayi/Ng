@@ -5,6 +5,7 @@ using IdentityModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Xown.Travels.Core;
+using Xown.Travels.Core.Infrastructure.Process;
 
 namespace _247.Travels.Ng.Apis.Server
 {
@@ -159,6 +160,11 @@ namespace _247.Travels.Ng.Apis.Server
                 .AddScoped<UkPriceMarkupProcess>()
                 .AddScoped<BrightSunPriceMarkupProcess>()
                 .AddScoped<CurrencyConversion>()
+                .AddScoped<NdcOperations>()
+                .AddScoped<NgOperations>()
+                .AddScoped<TiqwaOperations>()
+                .AddScoped<TiqwaService>()
+                .AddScoped<TiqwaPriceMarkupProcess>()
                 .AddScoped<IMarkupManager, NgPriceMarkupProcess>();
 
             // Return services for further chaining
