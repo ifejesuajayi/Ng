@@ -156,7 +156,7 @@ namespace _247.Travels.Ng.Apis.Server
                 .AddScoped<ProviderDistributionService>()
                 .AddScoped<CorporateCodesManagement>()
                 .AddScoped<NdcPriceMarkupProcess>()
-                .AddScoped<NdcNairaPriceMarkupProcess>()
+                .AddScoped<NdcNgnPriceMarkupProcess>()
                 .AddScoped<NgPriceMarkupProcess>()
                 .AddScoped<UkPriceMarkupProcess>()
                 .AddScoped<BrightSunPriceMarkupProcess>()
