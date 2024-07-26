@@ -5,6 +5,7 @@ using IdentityModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Xown.Travels.Core;
+using Xown.Travels.Core.DomainServices.Operations;
 using Xown.Travels.Core.Infrastructure.Process;
 
 namespace _247.Travels.Ng.Apis.Server
@@ -168,6 +169,8 @@ namespace _247.Travels.Ng.Apis.Server
                 .AddScoped<TiqwaService>()
                 .AddScoped<TiqwaPriceMarkupProcess>()
                 .AddScoped<TiqwaRoutes>()
+                .AddScoped<NgUsdPriceMarkupProcess>()   
+                .AddScoped<NdcNgOperations>()
                 .AddScoped<IMarkupManager, NgPriceMarkupProcess>();
 
             // Return services for further chaining
