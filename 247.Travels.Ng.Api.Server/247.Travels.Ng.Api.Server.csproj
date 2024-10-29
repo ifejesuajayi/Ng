@@ -16,6 +16,10 @@
 		<Folder Include="Controllers\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\xown\xown-travels-core\xown.travels.core\Xown.Travels.Core.csproj" />
+	</ItemGroup>
+
 	<!-- <ItemGroup>
     <ProjectReference Include="..\..\..\xown\xown-travels-core\xown.travels.core\xown.travels.core.csproj" />
   </ItemGroup> -->

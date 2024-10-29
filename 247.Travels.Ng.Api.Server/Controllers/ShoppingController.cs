@@ -150,6 +150,40 @@ namespace _247.Travels.Ng.Apis.Server
                     statusCode: StatusCodes.Status500InternalServerError, detail: ex.Message);
             }
         }
+        
+        [AllowAnonymous]
+        [HttpGet(EndpointRoutes.ProcessOptimizedNgTwoFlightOffers)]
+        public async Task<ActionResult> ProcessOptimizedNgTwoOffersAsync([FromQuery] string flightRequestId, [FromQuery] string customerType, string office = "NgTwo")
+        {
+            try
+            {
+                // Process flight offers
+                var operation = await distributionService.ProcessOptimizedNgTwoOffersAsync(flightRequestId, customerType, restrictAirlines: true, office);
+
+                // If operation was un successful...
+                if (!operation.Successful)
+                {
+                    // Log the error
+                    logger.LogError(operation.ErrorMessage);
+
+                    // Return error response
+                    return Problem(title: operation.ErrorTitle,
+                        statusCode: operation.StatusCode, detail: operation.ErrorMessage);
+                }
+
+                // Return result
+                return Ok(operation.Result);
+            }
+            catch (Exception ex)
+            {
+                // Log error response
+                logger.LogError(ex.Message);
+
+                // Return error response
+                return Problem(title: "SYSTEM ERROR",
+                    statusCode: StatusCodes.Status500InternalServerError, detail: ex.Message);
+            }
+        }
 
         /// <summary>
         /// Verifies price of a flight result
