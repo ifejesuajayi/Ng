@@ -9,15 +9,11 @@
 
 	<ItemGroup>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-		<PackageReference Include="Xown.Travels.Core" Version="2.2.6" />
+		<PackageReference Include="Xown.Travels.Core" Version="2.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Controllers\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\..\..\xown\xown-travels-core\xown.travels.core\Xown.Travels.Core.csproj" />
 	</ItemGroup>
 
 	<!-- <ItemGroup>
