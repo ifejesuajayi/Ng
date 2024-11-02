@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Xown.Travels.Core;
 using Xown.Travels.Core.DomainServices.Operations;
 using Xown.Travels.Core.Infrastructure.Process;
+using Xown.Travels.Core.Verteil.Services;
 
 namespace _247.Travels.Ng.Apis.Server
 {
@@ -171,6 +172,10 @@ namespace _247.Travels.Ng.Apis.Server
                 .AddScoped<TiqwaRoutes>()
                 .AddScoped<NgUsdPriceMarkupProcess>()   
                 .AddScoped<NdcNgOperations>()
+                .AddScoped<VerteilClient>()
+                .AddScoped<VerteilService>()
+                .AddScoped<VerteilPriceMarkupProcess>()
+                .AddScoped<NgTwoPriceMarkupProcess>()
                 .AddScoped<IMarkupManager, NgPriceMarkupProcess>();
 
             // Return services for further chaining
