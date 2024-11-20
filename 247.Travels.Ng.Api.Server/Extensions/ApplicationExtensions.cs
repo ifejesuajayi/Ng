@@ -166,6 +166,7 @@ namespace _247.Travels.Ng.Apis.Server
                 .AddScoped<CurrencyConversion>()
                 .AddScoped<NdcOperations>()
                 .AddScoped<NgOperations>()
+                .AddScoped<NgUsdOperations>()
                 .AddScoped<TiqwaOperations>()
                 .AddScoped<TiqwaService>()
                 .AddScoped<TiqwaPriceMarkupProcess>()
